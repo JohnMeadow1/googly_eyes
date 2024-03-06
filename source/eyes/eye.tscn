@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://pnqptxmv5wg8"]
+
+[ext_resource type="Script" path="res://eyes/eye.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://doptpj02kk314" path="res://kenney_googly-eyes/Layers/0.png" id="2_tpfds"]
+[ext_resource type="Texture2D" uid="uid://blu52nh6vs3k7" path="res://kenney_googly-eyes/Layers/1.png" id="3_27qqw"]
+[ext_resource type="Texture2D" uid="uid://b5jg1ifyrnx2s" path="res://kenney_googly-eyes/Layers/2.png" id="4_yi175"]
+
+[node name="eye" type="Node2D"]
+position = Vector2(-72, -148)
+script = ExtResource("1")
+iris_radius = 276.807
+metadata/_edit_group_ = true
+
+[node name="white" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_tpfds")
+
+[node name="black" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(147.391, 257.428)
+scale = Vector2(0.483928, 0.483928)
+texture = ExtResource("3_27qqw")
+
+[node name="gloss" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("4_yi175")

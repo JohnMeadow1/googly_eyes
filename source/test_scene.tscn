@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8b8t3ayw1ehv"]
+
+[ext_resource type="PackedScene" uid="uid://pnqptxmv5wg8" path="res://eyes/eye.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://corry4ydxi70p" path="res://icon.svg" id="2"]
+
+[sub_resource type="GDScript" id="1"]
+script/source = "extends Node2D
+
+func _process(delta):
+	position = get_global_mouse_position()
+"
+
+[node name="Sprite2D" type="Node2D"]
+script = SubResource("1")
+
+[node name="Godot" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+
+[node name="eye1" parent="." instance=ExtResource("1")]
+position = Vector2(-41, -5)
+eye_radius = 64.0
+iris_radius = 32.0
+gravity = Vector2(0, 100)
+
+[node name="eye2" parent="." instance=ExtResource("1")]
+position = Vector2(41, -8)
+eye_radius = 69.145
+iris_radius = 21.205
+gravity = Vector2(0, 100)
